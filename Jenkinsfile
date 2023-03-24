@@ -9,7 +9,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'docker build -t minhnc111/my-app .'
+        sh 'docker build -t minhnc111/my-app:1.0.0 .'
       }
     }
     stage('Login') {
@@ -19,7 +19,7 @@ pipeline {
     }
     stage('Push') {
       steps {
-        sh 'docker push minhnc111/my-app'
+        sh 'docker push minhnc111/my-app:1.0.0'
       }
     }
   }
